@@ -204,7 +204,7 @@ void process_file(FILE *file) {
             continue;
         }
 
-        if (strchr("(){};,*", c)) {
+        if (strchr("(){};,*[]", c)) {
             printf("[%02d:%02d] TK_SPECIAL  : %c\n", line_count, start_col, c);
             continue;
         }
